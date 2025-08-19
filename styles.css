@@ -1,0 +1,408 @@
+/* Clean, valid Textual CSS stylesheet */
+
+/* Verification (initial) screen */
+#main-container {
+    align: center middle;
+    background: $surface;
+    padding: 1;
+}
+
+#main-content {
+    width: 80%;
+    max-width: 120;
+    min-width: 40;
+    background: $surface;
+    padding: 2;
+    margin: 1;
+    align: center middle;
+    border: none;
+}
+
+#title {
+    text-align: center;
+    text-style: bold;
+    color: $accent;
+    margin: 1 0;
+}
+
+#welcome {
+    text-align: center;
+    color: $success;
+    margin: 1 0;
+    text-style: italic;
+}
+
+#status {
+    text-align: center;
+    margin: 1 0;
+    color: $warning;
+    background: $surface-darken-1;
+    padding: 1;
+    border: solid $warning;
+}
+
+Button {
+    width: 100%;
+    margin: 1 0;
+}
+
+#verify-btn {
+    background: $success;
+    color: $text;
+}
+
+#verify-btn:hover {
+    background: $success-darken-1;
+}
+
+#verify-btn.running {
+    background: $primary;
+    color: $text;
+}
+
+#verify-btn.running:hover {
+    background: $primary-darken-1;
+}
+
+#exit-btn {
+    background: $error;
+    color: $text;
+}
+
+#exit-btn:hover {
+    background: $error-darken-2;
+}
+
+Header {
+    background: $primary;
+    color: $text;
+}
+
+Footer {
+    background: $surface-darken-1;
+}
+
+Screen {
+    align: center middle;
+}
+
+/* Main menu */
+#main-menu-container {
+    align: center middle;
+    background: transparent;
+    /* changed from $surface to transparent */
+    padding: 1;
+}
+
+#menu-wrapper {
+    align: center middle;
+    width: 70%;
+    max-width: 140;
+    min-width: 40;
+}
+
+#menu-stack {
+    width: 100%;
+    align: center middle;
+}
+
+#menu-stack Button {
+    width: 100%;
+    height: 3;
+    margin: 0 0 1 0;
+    text-style: bold;
+    content-align: center middle;
+    border: none;
+}
+
+#title-bar {
+    width: 100%;
+    height: 5;
+    background: transparent;
+    /* was $surface-darken-2, now transparent */
+    border: none;
+    padding: 1 2;
+    margin: 2 0 2 0;
+}
+
+#main-title {
+    text-align: center;
+    text-style: bold;
+    color: orange;
+}
+
+#start-btn {
+    background: $success;
+    color: $text;
+}
+
+#start-btn:hover {
+    background: $success-darken-1;
+}
+
+#train-btn {
+    background: $primary;
+    color: $text;
+}
+
+#train-btn:hover {
+    background: $primary-darken-1;
+}
+
+/* Start button in running (Stop) state should match Train button */
+#start-btn.running {
+    background: $primary;
+    color: $text;
+}
+
+#start-btn.running:hover {
+    background: $primary-darken-1;
+}
+
+#settings-btn {
+    background: orange;
+    color: black;
+}
+
+#settings-btn:hover {
+    background: #cc8400;
+}
+
+#main-exit-btn {
+    background: $error;
+    color: $text;
+}
+
+
+
+#main-exit-btn:hover {
+    background: $error-darken-2;
+}
+
+/* Keep Exit button static when focused (no click/press animation available) */
+#main-exit-btn:focus {
+    background: $error;
+    color: $text;
+}
+
+#main-exit-btn:focus-within {
+    background: $error;
+    color: $text;
+}
+
+/* Simple settings screen */
+#simple-settings-wrapper {
+    align: center middle;
+    padding: 2;
+    height: 100%;
+    margin: 5 0 0 0;
+}
+
+#simple-settings-stack {
+    width: 70%;
+    max-width: 160;
+    min-width: 40;
+    align: center middle;
+}
+
+#settings-title {
+    text-align: center;
+    text-style: bold;
+    color: orange;
+    height: 5;
+    border: none;
+    content-align: center middle;
+    margin: 2 0 2 0;
+}
+
+#simple-settings-stack .setting-row {
+    height: 3;
+    margin: 1 0 1 0;
+}
+
+#simple-settings-stack .setting-label {
+    width: 20%;
+    text-align: left;
+    padding: 1 1 0 0;
+    /* add top padding instead of padding inside Select */
+    text-style: bold;
+}
+
+#simple-settings-stack Select {
+    width: 80%;
+    height: 3;
+    content-align: left middle;
+    padding: 0 1;
+    /* remove previous top padding */
+}
+
+#settings-actions {
+    margin: 1 0 0 0;
+}
+
+#settings-actions Button {
+    width: 50%;
+    height: 3;
+    margin: 0 2 0 0;
+    text-style: bold;
+    content-align: center middle;
+    border: none;
+}
+
+#settings-actions Button:last-child {
+    margin: 0;
+}
+
+#settings-save {
+    background: $success;
+    color: $text;
+}
+
+#settings-save:hover {
+    background: $success-darken-1;
+}
+
+#settings-exit {
+    background: #2b2b2b;
+    /* match train back button */
+    color: white;
+}
+
+#settings-exit:hover {
+    background: #1a1a1a;
+    /* match train back hover */
+}
+
+/* Train screen specific buttons */
+#train-title {
+    text-align: center;
+    text-style: bold;
+    color: orange;
+    height: 5;
+    border: none;
+    /* colorless border */
+    content-align: center middle;
+    margin: 2 0 2 0;
+}
+
+#train-bind {
+    background: orange;
+    color: black;
+    border: none;
+    /* remove top line/border */
+    height: 3;
+    /* match main menu button height */
+    margin: 0 0 1 0;
+    /* match main menu button spacing */
+    text-style: bold;
+    /* match typography */
+    content-align: center middle;
+    /* match alignment */
+}
+
+#train-bind:hover {
+    background: #cc8400;
+}
+
+#train-start {
+    background: $success;
+    color: $text;
+}
+
+#train-start:hover {
+    background: $success-darken-1;
+}
+
+/* Match main menu Train button blue when running (Stop state) */
+#train-start.running {
+    background: $primary;
+    color: $text;
+}
+
+#train-start.running:hover {
+    background: $primary-darken-1;
+}
+
+#train-back {
+    background: #2b2b2b;
+    /* darker grey */
+    color: white;
+    width: 100%;
+    height: 3;
+    margin: 0 0 0 0;
+    text-style: bold;
+    content-align: center middle;
+    border: none;
+    align: center middle;
+}
+
+#train-back:hover {
+    background: #1a1a1a;
+    /* even darker on hover */
+}
+
+/* Train screen display container */
+#train-progress-container {
+    background: black;
+    border: solid orange;
+    padding: 1;
+    height: 7;
+    /* give it room so centering is visible */
+    content-align: center middle;
+    /* center children within this container */
+}
+
+/* Ensure text inside the display container is centered */
+#train-progress-info,
+#bound-keys-display {
+    text-align: center;
+}
+
+/* Hide placeholder so it doesn't affect vertical centering */
+#bound-keys-display {
+    display: none;
+}
+
+/* Also center the renderable/text vertically inside the info widget */
+#train-progress-info {
+    width: 100%;
+    height: 100%;
+    content-align: center middle;
+}
+
+/* Ensure any Static inside the container doesn't add extra margins and fills space */
+#train-progress-container Static {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    content-align: center middle;
+    /* center text within Static */
+    align: center middle;
+    /* center Static within container */
+}
+
+/* Generic widgets */
+Input {
+    margin: 0 0 1 0;
+    width: 100%;
+}
+
+Switch {
+    margin: 0 0 1 0;
+}
+
+Label {
+    text-style: bold;
+    color: $text;
+    margin: 1 0 0 0;
+}
+
+/* Verification buttons match main menu style */
+#main-content Button {
+    width: 100%;
+    height: 3;
+    margin: 0 0 1 0;
+    text-style: bold;
+    content-align: center middle;
+    border: none;
+}
